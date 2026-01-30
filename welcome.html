@@ -38,15 +38,11 @@
 </head>
 <body>
     <div>
-        <p>Redirecting to <a href="https://chuffed.org/project/helplayla">Help Layla project</a>...</p>
-        <p><small>If not redirected, <a href="https://chuffed.org/project/helplayla">click here</a></small></p>
+        <p>Welcome to Doll.Pink!</p>
     </div>
     
     <script>
-        // Immediate redirect as backup
-        window.location.href = 'https://chuffed.org/project/helplayla';
-        
-        // Preserve original anti-dev tools (optional for redirect)
+        // Preserve original anti-dev tools
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('keydown', function(e) {
             if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
