@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Doll.Pink! #1 Crypto Marketplace - International Shipping - Private P2P Exchange</title>
-<meta name="description" content="Website for Premium Products ranging from Makeup, Nail Polish, Eyeliner, Lipstick, Skin Care, HRT, Buy anything with any form of digital payment shipped internationally including crypto such as XMR, BTC, USDC, LTC and more upon request. This is a privacy focused website. Built just for you!" />
-<meta property="og:title" content="Doll.Pink! #1 Crypto Marketplace - International Shipping - Private P2P Exchange">
-<meta property="og:description" content="Website for Premium Products ranging from Makeup, Nail Polish, Eyeliner, Lipstick, Skin Care, HRT, Buy anything with any form of digital payment shipped internationally including crypto such as XMR, BTC, USDC, LTC and more upon request. This is a privacy focused website. Built just for you!">
+<title>Doll.Pink! Make Your Own Website Today. Forums, E-Shops, Personal Website + More [We Accept Crypto]</title>
+<meta name="description" content="Website for Premium Websites. Make your website with us today. We can make any website you may need check us out! We accept BTC, ETH, LTC, XMR, SOL" />
+<meta property="og:title" content="DDoll.Pink! Make Your Own Website Today. Forums, E-Shops, Personal Website + More [We Accept Crypto]">
+<meta property="og:description" content="Website for Premium Websites. Make your website with us today. We can make any website you may need check us out! We accept BTC, ETH, LTC, XMR, SOL">
 <meta property="og:image" content="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTZ4ZjRibGZtaDI1amgwNHk2MTFsaWxiMmp4OHgyMGdpNTFxajRzbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1BSDBZqphNc5O/giphy.gif">
 <meta property="og:url" content="https://doll.pink/welcome.html">
 <meta property="og:type" content="website">
@@ -14,35 +14,455 @@
 <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Ovo&display=swap" rel="stylesheet">
     
-    <style>
-        body {
-            font-family: "Ovo", serif;
-            background: #fff;
-            margin: 0;
-            padding: 40px;
-            color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    
+    body {
+        font-family: "Comic Sans MS", cursive, "Ovo", serif;
+        background: #fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAB1JREFUGFdjZGBg+M+ABzD8/////2dgYGBg+AMAsLcCZH+8xwAAAABJRU5ErkJggg==') repeat;
+        color: #000;
+        padding: 100px 0 140px 370px;
+        min-height: 300vh;
+        text-align: center;
+        text-shadow: 2px 2px 0px #ff69b4, 4px 4px 0px #000;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.6;
+        position: relative;
+    }
+    
+    /* Welcome section - TOP CENTERED */
+    .welcome-section {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* TOP alignment */
+        align-items: center; /* Horizontal center */
+        padding: 0.5rem;
+        max-width: 4000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .welcome-text {
+        font-size: 12px;
+        max-width: 4500px;
+        margin-top: 1rem;
+	text-decoration: none;
+    }
+    
+    .welcome-text p {
+	color: #000000;
+        margin-bottom: 1.5rem;
+	font-size: 20px;
+	font-family: 'Orbitron', monospace;
+        text-decoration: none;
+    }
+    
+    .welcome-text a {
+        color: #44444;
+        font-size: 36px;
+	font-family: 'Orbitron', monospace;
+        text-decoration: none;
+    }
+    
+    .welcome-text a:hover {
+        color: #ff1493;
+    }
+    
+    /* Pink cursor trail effect */
+    .cursor-trail {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, #ff69b4 20%, transparent 60%);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 99999;
+        transition: transform 0.1s ease-out;
+        mix-blend-mode: screen;
+    }
+    
+    .header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 350px !important;
+        right: 0 !important;
+        height: 80px !important;
+        background: linear-gradient(45deg, #ff69b4, #ff1493, #ffc0cb) !important;
+        border-bottom: 8px ridge #ff1493 !important;
+        border-left: 10px ridge #ff1493 !important;
+        z-index: 10000 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 30px !important;
+        box-shadow: 0 5px 30px rgba(255,105,180,0.8) !important;
+    }
+    
+    .header-title {
+        font-family: "Orbitron", monospace !important;
+        font-size: 32px !important;
+        font-weight: 900 !important;
+        color: #fff !important;
+        text-shadow: 3px 3px 0px #000, 1px 1px 0px #ff1493 !important;
+        margin: 0 !important;
+        letter-spacing: 2px !important;
+    }
+    
+    .footer {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 350px !important;
+        right: 0 !important;
+        height: 60px !important;
+        background: linear-gradient(45deg, #ff69b4, #ff1493, #ffc0cb) !important;
+        border-top: 6px ridge #ff1493 !important;
+        border-left: 10px ridge #ff1493 !important;
+        z-index: 10000 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 20px !important;
+        box-shadow: 0 -5px 30px rgba(255,105,180,0.8) !important;
+    }
+    
+    .footer-text {
+        font-family: "Orbitron", monospace !important;
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        color: #fff !important;
+        text-shadow: 2px 2px 0px #000, 1px 1px 0px #ff1493 !important;
+        margin: 0 !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .sidebar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 350px !important;
+        height: 100vh !important;
+        background: transparent !important;
+        border-right: 10px ridge #ff1493 !important;
+        z-index: 9999 !important;
+        padding: 100px 20px 140px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        gap: 30px !important;
+        overflow: hidden !important;
+    }
+    
+    /* Purple/Pink Snowballs */
+    .snowball {
+        position: absolute;
+        background: radial-gradient(ellipse 60% 60% at 30% 30%, #e6e6fa 0%, #dda0dd 30%, #ff69b4 60%, #c71585 100%);
+        border-radius: 50% 40% 50% 40%;
+        box-shadow: 
+            0 0 20px rgba(221, 160, 221, 0.6),
+            inset 0 2px 4px rgba(255, 255, 255, 0.3),
+            inset 0 -2px 4px rgba(199, 21, 133, 0.3);
+        pointer-events: none;
+        z-index: 1;
+        animation: snowfall linear infinite;
+        filter: blur(0.5px);
+    }
+
+    .snowball:nth-child(1) { width: 18px; height: 16px; left: 20px; animation-duration: 25s; animation-delay: 0s; }
+    .snowball:nth-child(2) { width: 24px; height: 22px; left: 80px; animation-duration: 30s; animation-delay: -5s; }
+    .snowball:nth-child(3) { width: 15px; height: 14px; left: 120px; animation-duration: 22s; animation-delay: -10s; }
+    .snowball:nth-child(4) { width: 28px; height: 26px; left: 250px; animation-duration: 35s; animation-delay: -2s; }
+    .snowball:nth-child(5) { width: 20px; height: 18px; left: 40px; animation-duration: 28s; animation-delay: -15s; }
+    .snowball:nth-child(6) { width: 16px; height: 15px; left: 200px; animation-duration: 26s; animation-delay: -8s; }
+    .snowball:nth-child(7) { width: 22px; height: 20px; left: 160px; animation-duration: 32s; animation-delay: -12s; }
+    .snowball:nth-child(8) { width: 19px; height: 17px; left: 280px; animation-duration: 24s; animation-delay: -18s; }
+    .snowball:nth-child(9) { width: 25px; height: 23px; left: 60px; animation-duration: 29s; animation-delay: -3s; }
+    .snowball:nth-child(10) { width: 17px; height: 16px; left: 100px; animation-duration: 27s; animation-delay: -20s; }
+
+    @keyframes snowfall {
+        0% {
+            transform: translateY(-100px) rotate(0deg);
+            opacity: 0;
         }
-        a {
-            color: #ff69b4;
-            text-decoration: none;
+        10% {
+            opacity: 1;
         }
-        a:hover {
-            color: #ff1493;
+        90% {
+            opacity: 1;
         }
-    </style>
+        100% {
+            transform: translateY(100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+    
+    .logo-section {
+        text-align: center;
+        padding: 0;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .logo-text {
+        font-family: "Orbitron", monospace !important;
+        font-size: 28px !important;
+        font-weight: 900 !important;
+        color: #fff !important;
+        text-shadow: 3px 3px 0px #ff1493, 1px 1px 0px #000 !important;
+        margin: 0 !important;
+        letter-spacing: 2px !important;
+        background: linear-gradient(45deg, #fff, #ff69b4, #fff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: table !important;
+        margin: 0 auto !important;
+    }
+    
+    .sidebar-section {
+        background: #ff69b4 !important;
+        padding: 18px;
+        border: 3px outset #fff;
+        border-radius: 0;
+        text-align: center;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .contact-section {
+        background: rgba(255,255,255,0.2) !important;
+        padding: 18px;
+        border: 3px outset #fff;
+        border-radius: 0;
+        text-align: center;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .sidebar-title {
+        font-size: 20px !important;
+        color: #fff !important;
+        text-shadow: 2px 2px 0px #000 !important;
+        margin: 0 0 10px 0 !important;
+        font-weight: bold !important;
+    }
+    
+    .create-btn {
+        background: #9370db !important;
+        color: #fff !important;
+        border: 3px outset #ba55d3 !important;
+        padding: 12px 22px !important;
+        font-size: 15px !important;
+        font-weight: bold !important;
+        font-family: "Comic Sans MS", cursive !important;
+        cursor: pointer !important;
+        text-shadow: 1px 1px 0px #000 !important;
+        position: relative !important;
+        overflow: hidden !important;
+        transition: all 0.3s ease !important;
+        width: 100% !important;
+        margin-top: 8px !important;
+    }
+    
+    .create-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+        transition: left 0.5s;
+    }
+    
+    .create-btn:hover::before {
+        left: 100%;
+    }
+    
+    .create-btn::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255,255,255,0.6);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+    
+    .create-btn:hover::after {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .create-btn:hover {
+        background: #8a2be2 !important;
+        border-color: #9400d3 !important;
+        box-shadow: 0 0 30px #9370db, inset 0 0 20px rgba(255,255,255,0.3) !important;
+        transform: scale(1.05) translateY(-2px) !important;
+        animation: sparkle 0.5s ease-in-out infinite !important;
+    }
+    
+    @keyframes sparkle {
+        0%, 100% { 
+            text-shadow: 1px 1px 0px #000, 0 0 10px #fff, 0 0 20px #9370db; 
+            box-shadow: 0 0 30px #9370db, inset 0 0 20px rgba(255,255,255,0.3);
+        }
+        50% { 
+            text-shadow: 1px 1px 0px #000, 0 0 20px #fff, 0 0 30px #9370db, 0 0 40px #ba55d3; 
+            box-shadow: 0 0 40px #ba55d3, inset 0 0 30px rgba(255,255,255,0.4);
+        }
+    }
+    
+    .content {
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+    
+    a {
+        color: #ff69b4;
+        text-decoration: none;
+        text-shadow: 1px 1px 0px #000;
+        font-size: 28px;
+    }
+    a:hover {
+        color: #ff1493;
+    }
+    
+    /* Pink scrollbar - no arrows */
+    ::-webkit-scrollbar {
+        width: 35px;
+    }
+    ::-webkit-scrollbar-button {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+    ::-webkit-scrollbar-track {
+        background: #ff69b4 !important;
+        border: 4px outset #ff1493 !important;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #ffc0cb !important;
+        border: 4px inset #ff69b4 !important;
+        border-radius: 0 !important;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #ff1493 !important;
+    }
+    
+    /* Firefox scrollbar - no arrows */
+    * {
+        scrollbar-width: thick;
+        scrollbar-color: #ffc0cb #ff69b4;
+    }
+    
+    /* Hide Firefox scrollbar arrows */
+    html {
+        scrollbar-arrow-color: transparent;
+    }
+</style>
 </head>
 <body>
-    <div>
-        <p>You can contact me at doll@doll.pink 
-            <a href https://chuffed.org/project/helplayla</a></p>
+    <div class="sidebar">
+        <!-- Purple/Pink Snowballs -->
+        <div class="snowball"></div>
+        <div class="snowball"></div>
+        <div class="snowball"></div>
+        <div class="snowball"></div>
+        <div class="snowball"></div>
+        <div class="snowball"></div>
+        <div class="snowball"></div>
+        <div class="snowball"></div>
+        <div class="snowball"></div>
+        <div class="snowball"></div>
+        
+        <div class="logo-section">
+            <h2 class="logo-text">Doll's Website</h2>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-title">Create your own fancy website</div>
+            <p style="font-size: 14px; margin: 0; color: #fff; text-shadow: 1px 1px 0px #000;">Custom domains that cater to your needs</p>
+            <p style="font-size: 14px; margin: 0; color: #fff; text-shadow: 1px 1px 0px #000;">All types of themes. Make a personal website or even a website for your business</p>
+            <p style="font-size: 14px; margin: 0; color: #fff; text-shadow: 1px 1px 0px #000;">Crypto Payments Accepted including BTC, LTC, XMR and many more!</p>
+            <button class="create-btn">Create Now</button>
+        </div>
+        <div class="contact-section">
+            <div class="sidebar-title">Contact Me</div>
+            <p style="font-size: 14px; margin: 0 0 10px 0; color: #fff; text-shadow: 1px 1px 0px #000;">You can contact me at</p>
+            <p style="font-size: 18px; margin: 0; color: #fff; text-shadow: 1px 1px 0px #000;">
+                <a href="mailto:doll@doll.pink">[doll@doll.pink]</a>
+            </p>
+            <p style="font-size: 14px; margin: 10px 0 0 0; color: #fff; text-shadow: 1px 1px 0px #000;">
+            </p>
+        </div>
+    </div>
+    
+    <div class="header">
+        <h1 class="header-title">You are now reading: 1/30/2025 Update</h1>
+    </div>
+    
+    <div class="footer">
+        <marquee class="footer-text"> Make your own website today! Starting at $100 You can now pay with crypto! Make your own online Store, Forums, Personal Website and even more! Contact us at doll@doll.pink</marquee>
+    </div>
+    
+    <!-- WELCOME SECTION - TOP CENTERED -->
+    <div class="welcome-section">
+        <h1 style="font-family: 'Orbitron', monospace; font-size: 36px; color: #ff1493; text-shadow: 3px 3px 0px #000;">Welcome to doll.pink | 1/30/2026 Update</h1>
+        <div class="welcome-text">
+            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #24f097; text-shadow: 3px 3px 0px #000;">You may have seen posts made by my friend about my situation. For those who haven't seen anything related to that, I basically had to fly to some country in Europe I chose Germany, which I'm starting to regret. I live in a shitty area and people stare at me in a bad way constantly, especially boomers.</p>
+            
+            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #24f060; text-shadow: 3px 3px 0px #000;">Now the reason I had to do that was cuz my parents found out I was trans and also found my HRT and supplies for it. They basically did fucked up shit to me and I'm still in pain from that. Basically beat me and shit.</p>
+            
+            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #249000; text-shadow: 3px 3px 0px #000;">I have no idea how I made it this far and some of the things I did to be here today seems like it never happened... It's a bit better than Egypt here but still some people are passive aggressive to me, kinda trying to avoid me so idk how that will affect me...</p>
+            
+            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #992190; text-shadow: 3px 3px 0px #000;">I'm currently living in a hotel for now with the money raised, which I'm very thankful for. I didn't expect anyone to donate so I'm very thankful for it.</p>
+            
+            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #ff4060; text-shadow: 3px 3px 0px #000;">I'm looking forward to fixing the legal stuff as far as I can—that is—and applying for asylum but I don't think I'll ever have enough to do that so I have no idea what I'm gonna do... Also getting an apartment is laughable lol the price they ask for that is insane...</p>
+            
+            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #ff4060; text-shadow: 3px 3px 0px #000;">At least I'm not outside in the cold... I was homeless for 2 weeks+ I went to a shelter but the people there were bad and some of them stole some clothes I had with me... Someone even pulled a knife on me and later got arrested. I only got a hotel room today after I received the funds into my bank account.</p>
+            
+            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #ff4060; text-shadow: 3px 3px 0px #000;">Sometimes I really want to leave it all behind and end my life... I basically have no one apart from 1 person but she has a family and has had a kid recently.. so she doesn't have as much time as before. It's scary being alone on your own—not that I ever had anyone... I wonder why I keep going...</p>
+            
+            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #f56fff; text-shadow: 3px 3px 0px #000;">If you wish to contact me you can do so here at my email <a href="mailto:doll@doll.pink">[doll@doll.pink]</a></p>
+            
+            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #ffff49; text-shadow: 3px 3px 0px #000;">For anyone wondering this is the link to my fundraiser: <a href="https://chuffed.org/project/helplayla">https://chuffed.org/project/helplayla</a></p>
+            
+            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #ffff49; text-shadow: 3px 3px 0px #000;">That's all for now thanks for reading! I hope this post finds you in a better position than I! 💕</p>
+        </div>
     </div>
     
     <script>
+        // Pink cursor trail effect
+        const trail = document.createElement('div');
+        trail.className = 'cursor-trail';
+        document.body.appendChild(trail);
+        
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            trail.style.left = mouseX - 10 + 'px';
+            trail.style.top = mouseY - 10 + 'px';
+            trail.style.transform = `scale(${Math.random() * 0.5 + 0.8})`;
+        });
+        
         // Preserve original anti-dev tools
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('keydown', function(e) {
