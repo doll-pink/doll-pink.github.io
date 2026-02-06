@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exclusive Doll Content</title>
     <link rel="icon" type="image/png" href="favicon.png">
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -221,25 +222,23 @@
             background: linear-gradient(to bottom, #ffaa00, #ffd700) !important; border-color: #ff1493 !important;
         }
         .buy-vip {
-            background: linear-gradient(to bottom, #8b0000, #ff0000) !important;
-            border-color: #ff4444 !important; font-size: 17px !important;
+            background: linear-gradient(to bottom, #ffd700, #ffaa00) !important;
+            color: #000 !important; border-color: #ff8c00 !important; font-size: 17px !important;
         }
         .buy-vip:hover {
-            background: linear-gradient(to bottom, #ff4444, #ff0000) !important; border-color: #ffd700 !important;
+            background: linear-gradient(to bottom, #ffaa00, #ffd700) !important; border-color: #ff1493 !important;
         }
         .buy-live-monthly {
-            background: linear-gradient(to bottom, #ff00ff, #ff1493) !important;
-            border-color: #ff69b4 !important; font-size: 17px !important;
+            background: linear-gradient(to bottom, #ff00ff, #ffd700) !important; border-color: #ff1493 !important;
         }
         .buy-live-monthly:hover {
-            background: linear-gradient(to bottom, #ff1493, #ff00ff) !important; border-color: #ffd700 !important;
+            background: linear-gradient(to bottom, #ffaa00, #ffd700) !important; border-color: #ff1493 !important;
         }
         .buy-live-lifetime {
-            background: linear-gradient(to bottom, #ff1493, #ff00ff) !important;
-            border-color: #ff69b4 !important; font-size: 17px !important; margin-top: 8px;
+            background: linear-gradient(to bottom, #ff00ff, #ffd700) !important; border-color: #ff1493 !important;
         }
         .buy-live-lifetime:hover {
-            background: linear-gradient(to bottom, #ff00ff, #ff1493) !important; border-color: #ffd700 !important;
+            background: linear-gradient(to bottom, #ffaa00, #ffd700) !important; border-color: #ff1493 !important;
         }
         .section-title {
             font-size: 15px; color: #000080; font-weight: bold; margin: 18px 0 10px 0;
@@ -248,7 +247,7 @@
         @media (max-width: 480px) { .section-title { font-size: 14px; margin: 15px 0 8px 0; } }
         .content-preview {
             background: #f5f5ff; border: 2px outset #c0c0c0; padding: 12px; margin: 12px 0;
-            font-style: italic; border-radius: 8px;
+            font-family: 'Cascadia Code', Consolas, monospace !important; font-size: 11px; color: #ff1493; border-radius: 8px;
         }
         .pricing-options { margin: 10px 0; }
         .pricing-note {
@@ -388,6 +387,80 @@
             border-color: #ff1493; transform: scale(1.05);
         }
     </style>
+   <script>
+        // Print CHRK ASCII art to console
+        console.log(`
+ ██████████      ███████    █████       █████
+░░███░░░░███   ███░░░░░███ ░░███       ░░███
+ ░███   ░░███ ███     ░░███ ░███        ░███
+ ░███    ░███░███      ░███ ░███        ░███
+ ░███    ░███░███      ░███ ░███        ░███
+ ░███    ███ ░░███     ███  ░███      █ ░███      █
+ ██████████   ░░░███████░   ███████████ ███████████
+░░░░░░░░░░      ░░░░░░░    ░░░░░░░░░░░ ░░░░░░░░░░░
+
+
+
+ ███████████  █████ ██████   █████ █████   ████
+░░███░░░░░███░░███ ░░██████ ░░███ ░░███   ███░
+ ░███    ░███ ░███  ░███░███ ░███  ░███  ███
+ ░██████████  ░███  ░███░░███░███  ░███████
+ ░███░░░░░░   ░███  ░███ ░░██████  ░███░░███
+ ░███         ░███  ░███  ░░█████  ░███ ░░███
+ █████        █████ █████  ░░█████ █████ ░░████
+░░░░░        ░░░░░ ░░░░░    ░░░░░ ░░░░░   ░░░░
+
+
+
+        `);
+
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U (view source)
+        document.addEventListener('keydown', function(e) {
+            // F12
+            if (e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+I or Ctrl+Shift+C
+            if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 67)) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+U (view source)
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+                return false;
+            }
+        }, false);
+
+        // Disable text selection, drag, and copy
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Additional inspect element detection (basic)
+        (function() {
+            setInterval(function() {
+                if (window.outerHeight - window.innerHeight > 200 ||
+                    window.outerWidth - window.innerWidth > 200) {
+                    alert('DevTools detected! Refreshing page...');
+                    location.reload();
+                }
+            }, 500);
+        })();
+    </script>
 </head>
 <body>
 
@@ -411,16 +484,13 @@
                 <div class="paywall-header">
                     <div class="paywall-title">PHOTO INTRO</div>
                 </div>
-                <div class="plan-title">10 Exclusive Photos</div>
+                <div class="plan-title">20 Exclusive Photos</div>
                 <div class="plan-price">$29</div>
                 <ul class="features">
-                    <li>10 HD personal photos</li>
-                    <li>Watermarked previews</li>
-                    <li>30 days access</li>
-                    <li>1 device only</li>
+                    <li>20 HD personal photos</li>
                     <li>Photo gallery viewer</li>
                     <li>Zoom & pan</li>
-                    <li>Download photos</li>
+                    <li>Download photos from any device</li>
                     <li class="featured-feature">❌ No videos</li>
                 </ul>
                 <button class="buy-button buy-premium" onclick="buyPlan('basic', 29)">PHOTOS ONLY - $29</button>
@@ -486,6 +556,7 @@
                     <li>✅ Live chat interaction</li>
                     <li>✅ Daily routines</li>
                     <li>✅ Private moments</li>
+                    <li>✅ Access to my private social media</li>
                     <li>✅ Cancel anytime (monthly)</li>
                 </ul>
                 <div class="pricing-options">
@@ -580,31 +651,31 @@
 
         // YOUR ORIGINAL SCRIPT BELOW - UNCHANGED
         const videos = [
-            {id:1,title:"Pink Lingerie Try-On",channel:"Premium Only",views:"247",time:"2 days", clear: true},
-            {id:2,title:"Thigh-High Stockings",channel:"Premium Only",views:"183",time:"1 week", clear: true},
-            {id:3,title:"Cosplay Photoshoot",channel:"Premium Only",views:"296",time:"3 days", clear: true},
-            {id:4,title:"",channel:"Premium Only",views:"142",time:"5 days"},
-            {id:5,title:"",channel:"Premium Only",views:"289",time:"1 day"},
-            {id:6,title:"",channel:"Premium Only",views:"198",time:"4 days"},
-            {id:7,title:"",channel:"Premium Only",views:"167",time:"6 days"},
-            {id:8,title:"",channel:"Premium Only",views:"234",time:"2 weeks"},
-            {id:9,title:"",channel:"Premium Only",views:"156",time:"9 days"},
-            {id:10,title:"",channel:"Premium Only",views:"278",time:"3 days"},
-            {id:11,title:"",channel:"Premium Only",views:"189",time:"1 week"},
-            {id:12,title:"",channel:"Premium Only",views:"321",time:"5 days"},
-            {id:13,title:"",channel:"Premium Only",views:"176",time:"10 days"},
-            {id:14,title:"",channel:"Premium Only",views:"245",time:"2 days"},
-            {id:15,title:"",channel:"Premium Only",views:"198",time:"7 days"},
-            {id:16,title:"",channel:"Premium Only",views:"267",time:"4 days"},
-            {id:17,title:"",channel:"Premium Only",views:"134",time:"12 days"},
-            {id:18,title:"",channel:"Premium Only",views:"298",time:"1 day"},
-            {id:19,title:"",channel:"Premium Only",views:"223",time:"6 days"},
-            {id:20,title:"",channel:"Premium Only",views:"187",time:"8 days"},
-            {id:21,title:"",channel:"Premium Only",views:"256",time:"3 days"},
-            {id:22,title:"",channel:"Premium Only",views:"179",time:"11 days"},
-            {id:23,title:"",channel:"Premium Only",views:"312",time:"2 days"},
-            {id:24,title:"",channel:"Premium Only",views:"165",time:"9 days"},
-            {id:25,title:"",channel:"Premium Only",views:"294",time:"4 days"}
+            {id:1,title:"Pink Lingerie Try-On",channel:"Premium Only",views:"47",time:"2 days", clear: true},
+            {id:2,title:"Thigh-High Stockings",channel:"Premium Only",views:"83",time:"1 week", clear: true},
+            {id:3,title:"Cosplay Photoshoot",channel:"Premium Only",views:"96",time:"3 days", clear: true},
+            {id:4,title:"",channel:"Premium Only",views:"42",time:"5 days"},
+            {id:5,title:"",channel:"Premium Only",views:"89",time:"1 day"},
+            {id:6,title:"",channel:"Premium Only",views:"98",time:"4 days"},
+            {id:7,title:"",channel:"Premium Only",views:"67",time:"6 days"},
+            {id:8,title:"",channel:"Premium Only",views:"34",time:"14 days"},
+            {id:9,title:"",channel:"Premium Only",views:"56",time:"45 days"},
+            {id:10,title:"",channel:"Premium Only",views:"78",time:"120 days"},
+            {id:11,title:"",channel:"Premium Only",views:"89",time:"1 week"},
+            {id:12,title:"",channel:"Premium Only",views:"21",time:"5 days"},
+            {id:13,title:"",channel:"Premium Only",views:"76",time:"10 days"},
+            {id:14,title:"",channel:"Premium Only",views:"45",time:"2 days"},
+            {id:15,title:"",channel:"Premium Only",views:"98",time:"7 days"},
+            {id:16,title:"",channel:"Premium Only",views:"67",time:"4 days"},
+            {id:17,title:"",channel:"Premium Only",views:"34",time:"12 days"},
+            {id:18,title:"",channel:"Premium Only",views:"98",time:"1 day"},
+            {id:19,title:"",channel:"Premium Only",views:"23",time:"6 days"},
+            {id:20,title:"",channel:"Premium Only",views:"87",time:"8 days"},
+            {id:21,title:"",channel:"Premium Only",views:"56",time:"3 days"},
+            {id:22,title:"",channel:"Premium Only",views:"79",time:"11 days"},
+            {id:23,title:"",channel:"Premium Only",views:"12",time:"2 days"},
+            {id:24,title:"",channel:"Premium Only",views:"14",time:"9 days"},
+            {id:25,title:"",channel:"Premium Only",views:"7",time:"4 days"}
         ];
 
         const photos = [];
