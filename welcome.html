@@ -5,33 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exclusive Doll Content</title>
     <style>
-        * { margin: 0; padding: 0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: #000080 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23ccccff" width="100" height="100"/><circle fill="%23ffffff" opacity="0.3" cx="20" cy="20" r="3"/><circle fill="%23ffffff" opacity="0.2" cx="80" cy="80" r="2"/><circle fill="%23ffffff" opacity="0.1" cx="50" cy="50" r="1"/></svg>') repeat;
             font-family: 'Times New Roman', Times, serif; color: #000000;
-            padding: 20px; line-height: 1.4;
+            padding: 15px; line-height: 1.4; min-height: 100vh;
         }
 
+        /* MOBILE-FIRST GRID */
         .video-grid, .photo-grid {
             max-width: 1400px; margin: 0 auto 40px auto;
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            display: grid;
             gap: 12px;
         }
+
+        @media (max-width: 768px) {
+            .video-grid, .photo-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-grid, .photo-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 8px;
+            }
+            body { padding: 10px; }
+        }
+
         .video-card {
             background: #e6e6fa; border: 3px outset #c0c0c0;
-            padding: 15px; position: relative; cursor: pointer;
+            padding: 12px; position: relative; cursor: pointer; touch-action: manipulation;
         }
         .photo-card {
             background: #f0f8ff; border: 2px outset #c0c0c0;
-            padding: 8px; position: relative; cursor: pointer; height: 180px;
+            padding: 8px; position: relative; cursor: pointer; touch-action: manipulation;
+            height: 170px;
         }
-        .photo-card:hover, .video-card:hover { border-color: #ff69b4; }
+
+        @media (max-width: 480px) {
+            .video-card { padding: 10px; }
+            .photo-card { padding: 6px; height: 160px; }
+        }
 
         .thumbnail, .photo-thumb, .live-thumb {
-            width: 100%; height: 180px; background: linear-gradient(45deg, #c0c0c0, #e0e0e0);
+            width: 100%; height: 140px; background: linear-gradient(45deg, #c0c0c0, #e0e0e0);
             border: 2px inset #808080; margin-bottom: 8px; display: flex; align-items: center; justify-content: center;
-            font-size: 32px; color: #ff1493; font-weight: bold; position: relative; overflow: hidden;
+            font-size: 28px; color: #ff1493; font-weight: bold; position: relative; overflow: hidden;
         }
+
+        @media (max-width: 480px) {
+            .thumbnail, .photo-thumb, .live-thumb {
+                height: 120px; font-size: 24px;
+            }
+        }
+
         .thumbnail.clear, .photo-thumb.clear, .live-thumb.clear {
             background: linear-gradient(45deg, #ff69b4, #ff1493); color: white;
         }
@@ -39,93 +68,204 @@
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background: inherit; filter: blur(10px); z-index: 1;
         }
-        .thumbnail.blur span, .photo-thumb.blur span, .live-thumb.blur span { position: relative; z-index: 2; }
+        .thumbnail.blur span, .photo-thumb.blur span, .live-thumb.blur span {
+            position: relative; z-index: 2;
+        }
 
-        .video-title { font-size: 14px; font-weight: bold; margin-bottom: 4px; color: #000080; }
-        .channel { color: #ff1493; font-size: 12px; margin-bottom: 2px; }
-        .meta { font-size: 11px; color: #666666; }
-        .photo-title { font-size: 12px; font-weight: bold; color: #000080; text-align: center; }
+        .video-title { font-size: 13px; font-weight: bold; margin-bottom: 4px; color: #000080; }
+        .channel { color: #ff1493; font-size: 11px; margin-bottom: 2px; }
+        .meta { font-size: 10px; color: #666666; }
+        .photo-title { font-size: 11px; font-weight: bold; color: #000080; text-align: center; }
+
+        @media (max-width: 480px) {
+            .video-title { font-size: 12px; }
+            .channel { font-size: 10px; }
+            .meta, .photo-title { font-size: 9px; }
+        }
+
         .premium-lock {
             position: absolute; top: 5px; right: 5px;
             background: #ff1493; color: white; padding: 1px 4px;
-            font-size: 9px; font-weight: bold; border: 1px outset #ff69b4;
+            font-size: 8px; font-weight: bold; border: 1px outset #ff69b4;
         }
 
         .page-tabs {
-            max-width: 1400px; margin: 0 auto 20px auto; text-align: center;
+            max-width: 1400px; margin: 0 auto 20px auto; text-align: center; padding: 0 10px;
         }
         .tab-btn {
-            background: #e6e6fa; border: 3px outset #c0c0c0; padding: 12px 24px;
-            font-size: 18px; font-weight: bold; cursor: pointer; margin: 0 10px;
-            color: #000080; font-family: 'Times New Roman', Times, serif;
+            background: #e6e6fa; border: 3px outset #c0c0c0; padding: 10px 20px;
+            font-size: 16px; font-weight: bold; cursor: pointer; margin: 0 5px;
+            color: #000080; font-family: 'Times New Roman', Times, serif; touch-action: manipulation;
+            border-radius: 8px; min-width: 100px;
         }
+
+        @media (max-width: 480px) {
+            .tab-btn {
+                padding: 12px 16px; font-size: 15px; margin: 0 3px;
+                min-width: 90px; display: inline-block;
+            }
+        }
+
         .tab-btn.active {
             background: linear-gradient(to bottom, #ff69b4, #ff1493); color: white;
             border-color: #ff69b4;
         }
         .tab-btn:hover { border-color: #ff69b4; }
 
+        /* MOBILE-OPTIMIZED PAYWALL */
         .paywall-modal {
             display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
             background: rgba(0,0,128,0.95); z-index: 1000; overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .paywall-container {
-            max-width: 1600px; margin: 20px auto; padding: 20px; gap: 15px;
-            display: flex; min-height: calc(100vh - 40px);
+            max-width: 1400px; margin: 10px auto; padding: 15px; gap: 15px;
+            display: flex; flex-direction: column;
         }
+
+        @media (min-width: 769px) {
+            .paywall-container {
+                flex-direction: row; min-height: calc(100vh - 20px);
+            }
+        }
+
         .paywall-left, .paywall-middle, .paywall-right {
-            flex: 1; min-height: 90vh; overflow-y: auto; padding-bottom: 30px;
+            flex: 1; min-height: 400px; overflow-y: auto; padding-bottom: 20px;
+            -webkit-overflow-scrolling: touch;
         }
-        .paywall-left { background: #e6e6fa; border: 4px outset #c0c0c0; padding: 25px; margin-right: 10px; }
+
+        @media (min-width: 769px) {
+            .paywall-left { margin-right: 10px; }
+            .paywall-middle { margin: 0 10px; flex: 1.2; }
+            .paywall-right { margin-left: 10px; }
+        }
+
+        @media (max-width: 480px) {
+            .paywall-left, .paywall-middle, .paywall-right {
+                min-height: 350px; margin-bottom: 15px;
+            }
+        }
+
+        .paywall-left { background: #e6e6fa; border: 4px outset #c0c0c0; padding: 20px; }
         .paywall-middle {
-            background: #fff0f5; border: 5px double #ff1493; padding: 25px;
-            margin: 0 10px; position: relative; flex: 1.2;
+            background: #fff0f5; border: 5px double #ff1493; padding: 20px;
+            position: relative;
         }
-        .paywall-right { background: #f0f8ff; border: 4px outset #c0c0c0; padding: 25px; margin-left: 10px; }
+        .paywall-right { background: #f0f8ff; border: 4px outset #c0c0c0; padding: 20px; }
+
+        @media (max-width: 480px) {
+            .paywall-left, .paywall-middle, .paywall-right { padding: 15px; }
+        }
 
         .paywall-header {
             background: linear-gradient(to right, #000080, #0000ff); color: white;
-            padding: 18px; text-align: center; border-bottom: 4px solid #c0c0c0;
-            margin: -25px -25px 20px -25px; position: relative;
+            padding: 15px; text-align: center; border-bottom: 4px solid #c0c0c0;
+            margin: -20px -20px 15px -20px; position: relative;
         }
-        .paywall-title { font-size: 22px; font-weight: bold; text-shadow: 1px 1px 2px #000; }
 
-        .plan-title { font-size: 20px; color: #000080; font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
-        .plan-price { font-size: 36px; color: #ff1493; font-weight: bold; margin-bottom: 15px; text-shadow: 1px 1px 1px #fff; }
+        @media (max-width: 480px) {
+            .paywall-header { padding: 12px; margin: -15px -15px 12px -15px; }
+        }
+
+        .paywall-title { font-size: 20px; font-weight: bold; text-shadow: 1px 1px 2px #000; }
+        @media (max-width: 480px) { .paywall-title { font-size: 18px; } }
+
+        .plan-title {
+            font-size: 18px; color: #000080; font-weight: bold; margin-bottom: 10px;
+            border-bottom: 2px solid #ccc; padding-bottom: 5px;
+        }
+        @media (max-width: 480px) { .plan-title { font-size: 16px; } }
+
+        .plan-price {
+            font-size: 32px; color: #ff1493; font-weight: bold; margin-bottom: 15px;
+            text-shadow: 1px 1px 1px #fff;
+        }
+        @media (max-width: 480px) { .plan-price { font-size: 28px; } }
 
         .features { list-style: none; margin-bottom: 18px; }
-        .features li { padding: 6px 0; padding-left: 22px; position: relative; font-size: 14px; border-bottom: 1px solid #eee; }
+        .features li {
+            padding: 6px 0; padding-left: 22px; position: relative; font-size: 13px;
+            border-bottom: 1px solid #eee;
+        }
+        @media (max-width: 480px) {
+            .features li { font-size: 12px; padding: 5px 0; }
+        }
         .features li:last-child { border-bottom: none; }
-        .features li:before { content: "✦"; position: absolute; left: 0; color: #ff69b4; font-weight: bold; font-size: 16px; }
+        .features li:before {
+            content: "✦"; position: absolute; left: 0; color: #ff69b4; font-weight: bold; font-size: 14px;
+        }
         .featured-feature { color: #ff1493 !important; font-weight: bold; }
 
         .buy-button {
             width: 100%; background: linear-gradient(to bottom, #ff69b4, #ff1493);
-            color: white; border: 3px outset #ff69b4; padding: 16px;
-            font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px;
+            color: white; border: 3px outset #ff69b4; padding: 14px;
+            font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px;
             font-family: 'Times New Roman', Times, serif; text-shadow: 1px 1px 1px #000;
+            border-radius: 8px; touch-action: manipulation; min-height: 50px; display: flex;
+            align-items: center; justify-content: center;
         }
-        .buy-button:hover { background: linear-gradient(to bottom, #ff1493, #ff69b4); border-color: #ffd700; }
-        .buy-premium { background: linear-gradient(to bottom, #ffd700, #ffaa00) !important; color: #000 !important; border-color: #ff8c00 !important; font-size: 20px !important; }
-        .buy-premium:hover { background: linear-gradient(to bottom, #ffaa00, #ffd700) !important; border-color: #ff1493 !important; }
-        .buy-vip { background: linear-gradient(to bottom, #8b0000, #ff0000) !important; border-color: #ff4444 !important; font-size: 20px !important; }
-        .buy-vip:hover { background: linear-gradient(to bottom, #ff4444, #ff0000) !important; border-color: #ffd700 !important; }
-        .buy-live-monthly { background: linear-gradient(to bottom, #ff00ff, #ff1493) !important; border-color: #ff69b4 !important; font-size: 20px !important; }
-        .buy-live-monthly:hover { background: linear-gradient(to bottom, #ff1493, #ff00ff) !important; border-color: #ffd700 !important; }
-        .buy-live-lifetime { background: linear-gradient(to bottom, #ff1493, #ff00ff) !important; border-color: #ff69b4 !important; font-size: 20px !important; margin-top: 8px; }
-        .buy-live-lifetime:hover { background: linear-gradient(to bottom, #ff00ff, #ff1493) !important; border-color: #ffd700 !important; }
 
-        .section-title { font-size: 16px; color: #000080; font-weight: bold; margin: 20px 0 12px 0; border-bottom: 2px solid #000080; padding-bottom: 5px; }
-        .content-preview { background: #f5f5ff; border: 2px outset #c0c0c0; padding: 15px; margin: 15px 0; font-style: italic; }
+        @media (max-width: 480px) {
+            .buy-button { padding: 16px; font-size: 15px; min-height: 55px; }
+        }
+
+        .buy-button:hover {
+            background: linear-gradient(to bottom, #ff1493, #ff69b4); border-color: #ffd700;
+        }
+        .buy-premium {
+            background: linear-gradient(to bottom, #ffd700, #ffaa00) !important;
+            color: #000 !important; border-color: #ff8c00 !important; font-size: 17px !important;
+        }
+        .buy-premium:hover {
+            background: linear-gradient(to bottom, #ffaa00, #ffd700) !important; border-color: #ff1493 !important;
+        }
+        .buy-vip {
+            background: linear-gradient(to bottom, #8b0000, #ff0000) !important;
+            border-color: #ff4444 !important; font-size: 17px !important;
+        }
+        .buy-vip:hover {
+            background: linear-gradient(to bottom, #ff4444, #ff0000) !important; border-color: #ffd700 !important;
+        }
+        .buy-live-monthly {
+            background: linear-gradient(to bottom, #ff00ff, #ff1493) !important;
+            border-color: #ff69b4 !important; font-size: 17px !important;
+        }
+        .buy-live-monthly:hover {
+            background: linear-gradient(to bottom, #ff1493, #ff00ff) !important; border-color: #ffd700 !important;
+        }
+        .buy-live-lifetime {
+            background: linear-gradient(to bottom, #ff1493, #ff00ff) !important;
+            border-color: #ff69b4 !important; font-size: 17px !important; margin-top: 8px;
+        }
+        .buy-live-lifetime:hover {
+            background: linear-gradient(to bottom, #ff00ff, #ff1493) !important; border-color: #ffd700 !important;
+        }
+
+        .section-title {
+            font-size: 15px; color: #000080; font-weight: bold; margin: 18px 0 10px 0;
+            border-bottom: 2px solid #000080; padding-bottom: 5px;
+        }
+        @media (max-width: 480px) { .section-title { font-size: 14px; margin: 15px 0 8px 0; } }
+
+        .content-preview {
+            background: #f5f5ff; border: 2px outset #c0c0c0; padding: 12px; margin: 12px 0;
+            font-style: italic; border-radius: 8px;
+        }
         .pricing-options { margin: 10px 0; }
-        .pricing-note { font-size: 12px; color: #ff1493; font-style: italic; margin-top: 5px; }
-        .live-preview-container { margin: 15px 0; }
+        .pricing-note {
+            font-size: 11px; color: #ff1493; font-style: italic; margin-top: 5px; text-align: center;
+        }
+        @media (max-width: 480px) { .pricing-note { font-size: 10px; } }
+
+        .live-preview-container { margin: 12px 0; }
         .live-video-container {
             position: relative; margin-bottom: 10px;
             background: linear-gradient(45deg, #c0c0c0, #e0e0e0);
-            border: 2px inset #808080; height: 180px; overflow: hidden;
+            border: 2px inset #808080; height: 140px; overflow: hidden; border-radius: 8px;
         }
+        @media (max-width: 480px) { .live-video-container { height: 120px; } }
+
         .live-thumb.blur { height: 100%; }
         .sound-bar {
             position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
@@ -146,54 +286,84 @@
             50% { transform: scaleY(1.3); opacity: 1; }
         }
         .hidden { display: none; }
-        .locked-title { color: #ff1493 !important; font-style: italic; font-size: 12px !important; }
+        .locked-title { color: #ff1493 !important; font-style: italic; font-size: 11px !important; }
 
-        /* PAYMENT MODAL - FIXED */
+        /* MOBILE PAYMENT MODAL */
         .payment-modal {
             display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
             background: rgba(0,0,128,0.98); z-index: 2000; overflow-y: auto;
-            backdrop-filter: blur(5px);
+            -webkit-overflow-scrolling: touch; backdrop-filter: blur(5px);
         }
         .payment-container {
-            max-width: 500px; margin: 50px auto; background: linear-gradient(135deg, #e6e6fa, #fff0f5);
-            border: 4px double #ff1493; padding: 30px; border-radius: 15px;
+            max-width: 90%; width: 500px; margin: 20px auto;
+            background: linear-gradient(135deg, #e6e6fa, #fff0f5);
+            border: 4px double #ff1493; padding: 25px; border-radius: 15px;
             box-shadow: 0 20px 40px rgba(255,20,147,0.3);
         }
+        @media (max-width: 480px) {
+            .payment-container {
+                max-width: 95%; width: 100%; margin: 10px auto; padding: 20px 15px;
+            }
+        }
+
         .payment-header {
             background: linear-gradient(to right, #ff1493, #ff69b4); color: white;
-            padding: 20px; text-align: center; border-radius: 10px 10px 0 0;
-            margin: -30px -30px 20px -30px;
+            padding: 18px; text-align: center; border-radius: 10px 10px 0 0;
+            margin: -25px -25px 18px -25px;
         }
-        .payment-title { font-size: 24px; font-weight: bold; text-shadow: 2px 2px 4px #000; }
-        .payment-amount { font-size: 36px; color: #ffd700; font-weight: bold; margin: 10px 0; }
+        @media (max-width: 480px) {
+            .payment-header { padding: 15px; margin: -20px -20px 15px -20px; }
+        }
+
+        .payment-title { font-size: 22px; font-weight: bold; text-shadow: 2px 2px 4px #000; }
+        @media (max-width: 480px) { .payment-title { font-size: 20px; } }
+
+        .payment-amount { font-size: 32px; color: #ffd700; font-weight: bold; margin: 8px 0; }
+        @media (max-width: 480px) { .payment-amount { font-size: 28px; } }
+
         .payment-instructions {
             background: rgba(255,255,255,0.9); border: 2px outset #c0c0c0;
-            padding: 20px; margin: 20px 0; border-radius: 8px; line-height: 1.6;
+            padding: 18px; margin: 18px 0; border-radius: 8px; line-height: 1.6;
         }
+        @media (max-width: 480px) { .payment-instructions { padding: 15px; margin: 15px 0; } }
+
         .paypal-link {
             display: inline-block; background: #0070ba; color: white;
-            padding: 15px 30px; text-decoration: none; font-weight: bold;
-            border-radius: 8px; font-size: 18px; margin: 15px 0; text-align: center;
+            padding: 16px 30px; text-decoration: none; font-weight: bold;
+            border-radius: 8px; font-size: 17px; margin: 15px 0; text-align: center;
             transition: all 0.3s ease; width: 100%; box-sizing: border-box;
+            touch-action: manipulation; min-height: 55px; display: flex;
+            align-items: center; justify-content: center;
         }
+        @media (max-width: 480px) { .paypal-link { padding: 18px; font-size: 16px; min-height: 60px; } }
+
         .paypal-link:hover {
-            background: #005ea6; transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,112,186,0.4);
+            background: #005ea6; transform: scale(1.02); box-shadow: 0 5px 15px rgba(0,112,186,0.4);
         }
         .close-payment {
             background: linear-gradient(to bottom, #ff69b4, #ff1493); color: white;
-            border: 2px outset #ff69b4; padding: 12px 24px; font-size: 16px;
+            border: 2px outset #ff69b4; padding: 14px 24px; font-size: 16px;
             cursor: pointer; border-radius: 8px; font-weight: bold; width: 100%;
-            margin-top: 15px;
+            margin-top: 12px; touch-action: manipulation; min-height: 55px;
+            display: flex; align-items: center; justify-content: center;
         }
+        @media (max-width: 480px) { .close-payment { padding: 16px; font-size: 15px; min-height: 60px; } }
 
         .view-content-btn {
-            position: absolute; top: 15px; right: 20px;
+            position: fixed; top: 15px; right: 15px;
             background: linear-gradient(to bottom, #ffd700, #ffaa00);
             color: #000; border: 3px outset #ff8c00;
-            padding: 8px 20px; font-size: 16px; font-weight: bold; cursor: pointer;
+            padding: 10px 20px; font-size: 15px; font-weight: bold; cursor: pointer;
             border-radius: 8px; font-family: 'Times New Roman', Times, serif;
-            text-shadow: 1px 1px 1px #fff; min-width: 120px; text-align: center;
+            text-shadow: 1px 1px 1px #fff; min-width: 110px; text-align: center;
+            touch-action: manipulation; z-index: 1001;
         }
+        @media (max-width: 480px) {
+            .view-content-btn {
+                top: 10px; right: 10px; padding: 12px 16px; font-size: 14px; min-width: 100px;
+            }
+        }
+
         .view-content-btn:hover {
             background: linear-gradient(to bottom, #ffaa00, #ffd700);
             border-color: #ff1493; transform: scale(1.05);
@@ -213,7 +383,7 @@
     <!-- PHOTO GRID -->
     <div class="photo-grid hidden" id="photoGrid"></div>
 
-    <!-- PAYWALL MODAL -->
+    <!-- PAYWALL MODAL - NOW FULLY MOBILE RESPONSIVE -->
     <div class="paywall-modal" id="paywallModal">
         <div class="paywall-container">
             <!-- LEFT: PHOTOS ONLY -->
@@ -268,9 +438,9 @@
                 <div class="live-preview-container">
                     <div class="live-video-container">
                         <div class="live-thumb blur">
-                            <span style="font-size: 28px;">🔴 LIVE</span>
+                            <span style="font-size: 26px;">🔴 LIVE</span>
                         </div>
-                        <div class="premium-lock" style="top: 8px; right: 8px; font-size: 10px; padding: 2px 6px;">PREMIUM LIVE</div>
+                        <div class="premium-lock" style="top: 6px; right: 6px; font-size: 9px; padding: 2px 5px;">PREMIUM LIVE</div>
                         <div class="sound-bar">
                             <div class="sound-bar-peak"></div>
                             <div class="sound-bar-peak"></div>
@@ -295,7 +465,7 @@
                     <li class="featured-feature">✅ EVERYTHING captured live</li>
                     <li>✅ Multiple camera angles</li>
                     <li>✅ HD 1080p quality</li>
-                    <li>✅ Give me any command/li>
+                    <li>✅ Give me any command</li>
                     <li>✅ Live chat interaction</li>
                     <li>✅ Daily routines</li>
                     <li>✅ Private moments</li>
@@ -309,10 +479,10 @@
                 <div class="pricing-note">Monthly: Cancel anytime • Lifetime: Forever access</div>
             </div>
         </div>
-        <button class="view-content-btn" onclick="closePaywall()" style="position: fixed; top: 20px; right: 20px;">View Content</button>
+        <button class="view-content-btn" onclick="closePaywall()">View Content</button>
     </div>
 
-    <!-- PAYMENT MODAL - NOW FULLY FUNCTIONAL -->
+    <!-- PAYMENT MODAL -->
     <div class="payment-modal" id="paymentModal">
         <div class="payment-container">
             <div class="payment-header">
@@ -321,7 +491,7 @@
             </div>
             <div class="payment-instructions">
                 <p><strong>STEP 1:</strong> Click the PayPal button below</p>
-                <p><strong>STEP 2:</strong> Enter exactly <span id="exactAmount" style="color: #ff1493; font-size: 20px; font-weight: bold;">$100.00</span></p>
+                <p><strong>STEP 2:</strong> Enter exactly <span id="exactAmount" style="color: #ff1493; font-size: 18px; font-weight: bold;">$100.00</span></p>
                 <p><strong>STEP 3:</strong> Receive link for access once payment is verified (instant)</p>
             </div>
             <a href="https://www.paypal.me/zitkala55" target="_blank" class="paypal-link" id="paypalLink">
@@ -332,7 +502,7 @@
     </div>
 
     <script>
-        // VIDEO DATA
+        // [Same JavaScript as original - no changes needed]
         const videos = [
             {id:1,title:"Pink Lingerie Try-On",channel:"Premium Only",views:"247",time:"2 days", clear: true},
             {id:2,title:"Thigh-High Stockings",channel:"Premium Only",views:"183",time:"1 week", clear: true},
@@ -361,7 +531,6 @@
             {id:25,title:"",channel:"Premium Only",views:"294",time:"4 days"}
         ];
 
-        // PHOTO DATA
         const photos = [];
         const clearPhotos = ["Pink Lingerie Set", "Thigh High Pose", "Cosplay Full Body"];
         for(let i = 1; i <= 150; i++) {
@@ -436,15 +605,16 @@
 
         function openPaywall() {
             document.getElementById('paywallModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
         }
 
         function closePaywall() {
             document.getElementById('paywallModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
 
-        // FIXED BUY PLAN FUNCTION
         function buyPlan(plan, amount) {
-            console.log(`Buying plan: ${plan} for $${amount}`); // Debug log
+            console.log(`Buying plan: ${plan} for $${amount}`);
 
             const planNames = {
                 'basic': 'PHOTO INTRO',
@@ -453,12 +623,10 @@
                 'live-lifetime': '24/7 LIVE LIFETIME'
             };
 
-            // Update payment modal content
             document.getElementById('paymentTitle').textContent = planNames[plan] || plan;
             document.getElementById('paymentAmount').textContent = `$${amount}`;
             document.getElementById('exactAmount').textContent = `$${amount}.00`;
 
-            // Close paywall and open payment modal
             document.getElementById('paywallModal').style.display = 'none';
             document.getElementById('paymentModal').style.display = 'block';
         }
@@ -468,10 +636,8 @@
             document.getElementById('paywallModal').style.display = 'block';
         }
 
-        // Initialize
         renderVideos();
 
-        // Make functions globally available
         window.handleVideoClick = handleVideoClick;
         window.handlePhotoClick = handlePhotoClick;
         window.buyPlan = buyPlan;
