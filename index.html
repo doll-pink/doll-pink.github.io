@@ -9,6 +9,64 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        /* ────────────────────────────────────────────────────────────────
+           LOADING SCREEN
+           ──────────────────────────────────────────────────────────────── */
+        #loading-screen {
+            position: fixed;
+            inset: 0;
+            background: transparent;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ff69b4;
+            font-family: 'Times New Roman', Times, serif;
+            transition: opacity 0.6s ease;
+        }
+        #loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .loading-title {
+            font-size: 42px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 44px #fff493;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            animation: pulse 12s infinite;
+        }
+        .progress-container {
+            width: 70%;
+            max-width: 500px;
+            height: 28px;
+            background: #000000;
+            border: 4px outset #ff69b4;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: inset 0 0 12px rgba(0,0,0,0.9);
+        }
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #f469b4, #ff9403, #c91585);
+            background-size: 200% 100%;
+            animation: shimmer 5.5s linear infinite;
+            transition: width 0.4s ease-out;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        @keyframes pulse {
+            0%,100% { opacity: 1; }
+            50%     { opacity: 0.7; }
+        }
+    </style>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         /* OLD-STYLE SHINY METALLIC PINK SCROLLBAR */
         ::-webkit-scrollbar {
             width: 16px; /* thicker = more retro */
@@ -132,7 +190,7 @@
         /* MOBILE-OPTIMIZED PAYWALL */
         .paywall-modal {
             display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,128,0.95); z-index: 1000; overflow-y: auto;
+            background: rgba(0,128,0,0.95); z-index: 1000; overflow-y: auto;
             -webkit-overflow-scrolling: touch;
         }
         .paywall-container {
@@ -463,6 +521,14 @@
     </script>
 </head>
 <body>
+    <!-- CUSTOM LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="loading-title">LOADING DOLL CONTENT 💋</div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
 
     <!-- TABS -->
     <div class="page-tabs">
@@ -791,6 +857,30 @@
         window.showVideos = showVideos;
         window.showPhotos = showPhotos;
         window.closePaymentModal = closePaymentModal;
+    </script>
+<script>
+        // ────────────────────────────────────────────────────────────────
+        //   CUSTOM LOADING BAR ANIMATION
+        // ────────────────────────────────────────────────────────────────
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            const progressBar = document.getElementById('progressBar');
+
+            let width = 0;
+            const fakeInterval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(fakeInterval);
+                    loadingScreen.classList.add('hidden');
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 600);
+                } else {
+                    width += Math.random() * 12 + 4; // random speed feel
+                    width = Math.min(width, 100);
+                    progressBar.style.width = width + '%';
+                }
+            }, 120);
+        });
     </script>
 </body>
 </html>
