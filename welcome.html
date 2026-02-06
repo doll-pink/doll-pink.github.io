@@ -1,495 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Doll.Pink! Make Your Own Website Today. Forums, E-Shops, Personal Website + More [We Accept Crypto]</title>
-<meta name="description" content="Website for Premium Websites. Make your website with us today. We can make any website you may need check us out! We accept BTC, ETH, LTC, XMR, SOL" />
-<meta property="og:title" content="DDoll.Pink! Make Your Own Website Today. Forums, E-Shops, Personal Website + More [We Accept Crypto]">
-<meta property="og:description" content="Website for Premium Websites. Make your website with us today. We can make any website you may need check us out! We accept BTC, ETH, LTC, XMR, SOL">
-<meta property="og:image" content="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTZ4ZjRibGZtaDI1amgwNHk2MTFsaWxiMmp4OHgyMGdpNTFxajRzbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1BSDBZqphNc5O/giphy.gif">
-<meta property="og:url" content="https://doll.pink/welcome.html">
-<meta property="og:type" content="website">
-<meta name="google-site-verification" content="NXZ5ARQGE6oxqEfH0AIe4s9kbkPtTbiaY-stS2IP6Zg" />
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Ovo&display=swap" rel="stylesheet">
-
-<style>
-    * {
-        box-sizing: border-box;
-    }
-
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-    }
-
-    body {
-        font-family: "Comic Sans MS", cursive, "Ovo", serif;
-        background: #fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAB1JREFUGFdjZGBg+M+ABzD8/////2dgYGBg+AMAsLcCZH+8xwAAAABJRU5ErkJggg==') repeat;
-        color: #000;
-        padding: 5px 0 440px 370px;
-        min-height: 200vh;
-        text-align: center;
-        text-shadow: 2px 2px 0px #ff69b4, 4px 4px 0px #000;
-        font-size: 24px;
-        font-weight: bold;
-        line-height: 1.6;
-        position: relative;
-        cursor: none !important;
-    }
-
-    /* Welcome section - TOP CENTERED */
-    .welcome-section {
-        height: 0.5vh;
-        flex-direction: column;
-        justify-content: flex-start; /* TOP alignment */
-        align-items: center; /* Horizontal center */
-        padding: 0.5rem;
-        max-width: 4000px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .welcome-text {
-        font-size: 12px;
-        max-width: 4500px;
-		display: flex
-        margin-top: 0.50rem;
-	text-decoration: none;
-    }
-
-    .welcome-text p {
-	color: #000000;
-        margin-bottom: 0.5rem;
-	font-size: 20px;
-	font-family: 'Orbitron', monospace;
-        text-decoration: none;
-    }
-
-    .welcome-text a {
-        color: #44444;
-        font-size: 36px;
-	font-family: 'Orbitron', monospace;
-        text-decoration: none;
-    }
-
-    .welcome-text a:hover {
-        color: #ff1493;
-    }
-
-
-    .header {
-        position: fixed !important;
-        top: 0 !important;
-        left: 350px !important;
-        right: 0 !important;
-        height: 10px !important;
-        background: #ff1493 !important;
-        border-left: 10px ridge #ff1493 !important;
-		border-right: 10px ridge #ff1493 !important;
-        z-index: 10000 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 30px !important;
-        gap: 20px !important;
-    }
-
-    .header-title {
-        font-family: "Orbitron", monospace !important;
-        font-size: 28px !important;
-        font-weight: 900 !important;
-        color: #fff !important;
-        text-shadow: 3px 3px 0px #000, 1px 1px 0px #ff1493 !important;
-        margin: 0 !important;
-        letter-spacing: 2px !important;
-        flex-shrink: 0;
-    }
-
-    .nav-buttons {
-        display: flex !important;
-        gap: 15px !important;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nav-btn {
-        background: linear-gradient(45deg, #9370db, #ba55d3) !important;
-        color: #fff !important;
-        border: 3px outset #ba55d3 !important;
-        padding: 10px 20px !important;
-        font-size: 16px !important;
-        font-weight: bold !important;
-        font-family: "Orbitron", monospace !important;
-        text-decoration: none !important;
-        cursor: none !important;
-        text-shadow: 1px 1px 0px #000 !important;
-        border-radius: 8px !important;
-        position: relative !important;
-        overflow: hidden !important;
-        transition: all 0.3s ease !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        min-width: 120px !important;
-        box-shadow: 0 4px 15px rgba(147, 112, 219, 0.4) !important;
-    }
-
-    .nav-btn:hover {
-        background: linear-gradient(45deg, #8a2be2, #9400d3) !important;
-        border-color: #9400d3 !important;
-        box-shadow: 0 6px 25px rgba(138, 43, 226, 0.7), inset 0 0 20px rgba(255,255,255,0.3) !important;
-        transform: scale(1.05) translateY(-2px) !important;
-        animation: sparkle 0.5s ease-in-out infinite !important;
-    }
-
-    .nav-btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-        transition: left 0.5s;
-    }
-
-    .nav-btn:hover::before {
-        left: 100%;
-    }
-
-    @keyframes sparkle {
-        0%, 100% {
-            text-shadow: 1px 1px 0px #000, 0 0 10px #fff, 0 0 20px #9370db;
-        }
-        50% {
-            text-shadow: 1px 1px 0px #000, 0 0 20px #fff, 0 0 30px #9370db, 0 0 40px #ba55d3;
-        }
-    }
-
-    .footer {
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 350px !important;
-        right: 0 !important;
-        height: 60px !important;
-        background: linear-gradient(45deg, #ff69b4, #ff1493, #ffc0cb) !important;
-        border-top: 6px ridge #ff1493 !important;
-        border-left: 10px ridge #ff1493 !important;
-		border-right: 10px ridge #ff1493 !important;
-        z-index: 10000 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 20px !important;
-        box-shadow: 0 -5px 30px rgba(255,105,180,0.8) !important;
-    }
-
-    .footer-text {
-        font-family: "Orbitron", monospace !important;
-        font-size: 20px !important;
-        font-weight: 700 !important;
-        color: #fff !important;
-        text-shadow: 2px 2px 0px #000, 1px 1px 0px #ff1493 !important;
-        margin: 0 !important;
-        letter-spacing: 1px !important;
-    }
-
-    .sidebar {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 350px !important;
-        height: 200vh !important;
-        background: linear-gradient(33deg, #ff66fb, #fffffd) !important;
-        z-index: 9999 !important;
-        padding: 10px 20px 140px 20px !important;
-        border-left: 10px ridge #ff1493 !important;
-		border-right: 10px ridge #ff1493 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: flex-start !important;
-        gap: 10px !important;
-        overflow: hidden !important;
-    }
-
-    /* Purple/Pink Snowballs */
-    .snowball {
-        position: absolute;
-        background: radial-gradient(ellipse 60% 60% at 30% 30%, #e6e6fa 0%, #dda0dd 30%, #ff69b4 60%, #c71585 100%);
-        border-radius: 50% 40% 50% 40%;
-        box-shadow:
-            0 0 20px rgba(221, 160, 221, 0.6),
-            inset 0 2px 4px rgba(255, 255, 255, 0.3),
-            inset 0 -2px 4px rgba(199, 21, 133, 0.3);
-        pointer-events: none;
-        z-index: 1;
-        animation: snowfall linear infinite;
-        filter: blur(0.5px);
-    }
-
-    .snowball:nth-child(1) { width: 28px; height: 16px; left: 20px; animation-duration: 25s; animation-delay: 0s; }
-    .snowball:nth-child(2) { width: 24px; height: 22px; left: 80px; animation-duration: 30s; animation-delay: -5s; }
-    .snowball:nth-child(3) { width: 25px; height: 14px; left: 120px; animation-duration: 22s; animation-delay: -10s; }
-    .snowball:nth-child(4) { width: 28px; height: 26px; left: 250px; animation-duration: 35s; animation-delay: -2s; }
-    .snowball:nth-child(5) { width: 20px; height: 18px; left: 40px; animation-duration: 28s; animation-delay: -15s; }
-    .snowball:nth-child(6) { width: 16px; height: 15px; left: 200px; animation-duration: 26s; animation-delay: -8s; }
-    .snowball:nth-child(7) { width: 22px; height: 20px; left: 160px; animation-duration: 32s; animation-delay: -12s; }
-    .snowball:nth-child(8) { width: 19px; height: 17px; left: 280px; animation-duration: 24s; animation-delay: -18s; }
-    .snowball:nth-child(9) { width: 25px; height: 23px; left: 60px; animation-duration: 29s; animation-delay: -3s; }
-    .snowball:nth-child(10) { width: 17px; height: 16px; left: 100px; animation-duration: 27s; animation-delay: -20s; }
-
-    @keyframes snowfall {
-        0% {
-            transform: translateY(-100px) rotate(0deg);
-            opacity: 0;
-        }
-        10% {
-            opacity: 1;
-        }
-        90% {
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(100vh) rotate(360deg);
-            opacity: 0;
-        }
-    }
-
-    .logo-section {
-        text-align: center;
-        padding: 0;
-        flex-shrink: 0;
-        position: relative;
-        z-index: 2;
-    }
-
-    .logo-text {
-        font-family: "Orbitron", monospace !important;
-        font-size: 28px !important;
-        font-weight: 900 !important;
-        color: #fff !important;
-        text-shadow: 3px 3px 0px #ff1493, 1px 1px 0px #000 !important;
-        margin: 0 !important;
-        letter-spacing: 2px !important;
-        background: linear-gradient(45deg, #fff, #ff69b4, #fff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        display: table !important;
-        margin: 0 auto !important;
-    }
-
-    .sidebar-section {
-        padding: 18px;
-        text-align: center;
-        flex-shrink: 0;
-        position: relative;
-        z-index: 2;
-    }
-
-    .contact-section {
-        padding: 8px;
-        text-align: center;
-        flex-shrink: 0;
-        position: relative;
-        z-index: 2;
-    }
-
-    .sidebar-title {
-        font-size: 20px !important;
-        color: #fff !important;
-        text-shadow: 2px 2px 0px #000 !important;
-        margin: 0 0 10px 0 !important;
-        font-weight: bold !important;
-    }
-
-
-    .content {
-        max-width: 900px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-    }
-
-    a {
-        color: #ff69b4;
-        text-decoration: none;
-        text-shadow: 1px 1px 0px #000;
-        font-size: 28px;
-    }
-    a:hover {
-        color: #ff1493;
-    }
-
-        /* ULTRA METALLIC PINK AERO SCROLLBAR */
-        ::-webkit-scrollbar {
-            width: 22px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Doll Content</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body {
+            background: #000080 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23ccccff" width="100" height="100"/><circle fill="%23ffffff" opacity="0.3" cx="20" cy="20" r="3"/><circle fill="%23ffffff" opacity="0.2" cx="80" cy="80" r="2"/><circle fill="%23ffffff" opacity="0.1" cx="50" cy="50" r="1"/></svg>') repeat;
+            font-family: 'Times New Roman', Times, serif; color: #000000;
+            padding: 20px; line-height: 1.4;
         }
 
-        ::-webkit-scrollbar-track {
-            background:
-                /* Ultra pink brushed metal base - MORE colors */
-                linear-gradient(45deg,
-                    #ff80bf 0%, #ff69b4 8%, #ff49aa 16%, #ff1493 24%,
-                    #e6008c 32%, #cc0080 40%, #b30075 48%, #990066 56%,
-                    #880055 64%, #770044 72%, #660033 80%, #550022 88%,
-                    #440011 96%, #330000 100%),
-                /* MULTIPLE metallic shine layers */
-                linear-gradient(135deg,
-                    rgba(255,230,255,0.6) 0%, rgba(255,200,255,0.5) 15%,
-                    rgba(255,180,255,0.4) 30%, rgba(255,150,255,0.3) 45%,
-                    transparent 55%, rgba(255,180,255,0.2) 65%,
-                    rgba(255,220,255,0.4) 80%, rgba(255,255,255,0.6) 100%),
-                /* DOUBLE brushed metal lines */
-                linear-gradient(90deg,
-                    rgba(255,220,255,0.25) 20%, transparent 25%,
-                    transparent 27%, rgba(255,220,255,0.15) 30%, transparent 75%,
-                    transparent 77%, rgba(255,220,255,0.25) 80%),
-                /* Edge highlight rim */
-                radial-gradient(ellipse 80% 30% at 10% 15%,
-                    rgba(255,255,255,0.5) 0%, transparent 50%);
-            background-size: 400px 120px, 100% 100%, 12px 100%, 100% 100% !important;
-            background-blend-mode: overlay, screen, overlay, soft-light;
-            box-shadow:
-                /* DEEPER inset bevels */
-                inset 0 2px 4px rgba(0,0,0,0.4),
-                inset 0 1px 0 rgba(255,255,255,0.8),
-                inset 0 -2px 6px rgba(0,0,0,0.6),
-                inset 0 -1px 0 rgba(0,0,0,1),
-                /* Outer edge glow */
-                0 0 0 1px rgba(255,255,255,0.4),
-                0 4px 12px rgba(0,0,0,0.7);
-            border-radius: 10px;
+        .video-grid, .photo-grid {
+            max-width: 1400px; margin: 0 auto 40px auto;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+        .video-card {
+            background: #e6e6fa; border: 3px outset #c0c0c0;
+            padding: 15px; position: relative; cursor: pointer;
+        }
+        .photo-card {
+            background: #f0f8ff; border: 2px outset #c0c0c0;
+            padding: 8px; position: relative; cursor: pointer; height: 180px;
+        }
+        .photo-card:hover, .video-card:hover { border-color: #ff69b4; }
+
+        .thumbnail, .photo-thumb, .live-thumb {
+            width: 100%; height: 180px; background: linear-gradient(45deg, #c0c0c0, #e0e0e0);
+            border: 2px inset #808080; margin-bottom: 8px; display: flex; align-items: center; justify-content: center;
+            font-size: 32px; color: #ff1493; font-weight: bold; position: relative; overflow: hidden;
+        }
+        .thumbnail.clear, .photo-thumb.clear, .live-thumb.clear {
+            background: linear-gradient(45deg, #ff69b4, #ff1493); color: white;
+        }
+        .thumbnail.blur::after, .photo-thumb.blur::after, .live-thumb.blur::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: inherit; filter: blur(10px); z-index: 1;
+        }
+        .thumbnail.blur span, .photo-thumb.blur span, .live-thumb.blur span { position: relative; z-index: 2; }
+
+        .video-title { font-size: 14px; font-weight: bold; margin-bottom: 4px; color: #000080; }
+        .channel { color: #ff1493; font-size: 12px; margin-bottom: 2px; }
+        .meta { font-size: 11px; color: #666666; }
+        .photo-title { font-size: 12px; font-weight: bold; color: #000080; text-align: center; }
+        .premium-lock {
+            position: absolute; top: 5px; right: 5px;
+            background: #ff1493; color: white; padding: 1px 4px;
+            font-size: 9px; font-weight: bold; border: 1px outset #ff69b4;
         }
 
-        ::-webkit-scrollbar-thumb {
-            background:
-                linear-gradient(145deg,
-                    rgba(255,100,180,0.9) 0%,
-                    rgba(255,50,150,0.95) 50%,
-                    rgba(255,20,120,0.9) 100%);
-            border-radius: 8px;
-            box-shadow:
-                /* MULTIPLE inset highlights */
-                inset 0 1px 0 rgba(255,255,255,0.6),
-                inset 0 -1px 0 rgba(150,0,100,0.8),
-                /* Outer chrome rim */
-                0 0 0 2px rgba(255,255,255,0.4),
-                0 2px 6px rgba(0,0,0,0.8),
-                0 0 12px rgba(255,100,180,0.4);
-            border: 3px solid rgba(0,0,0,0.5);
-            margin: 3px;
-            min-height: 40px;
+        .page-tabs {
+            max-width: 1400px; margin: 0 auto 20px auto; text-align: center;
+        }
+        .tab-btn {
+            background: #e6e6fa; border: 3px outset #c0c0c0; padding: 12px 24px;
+            font-size: 18px; font-weight: bold; cursor: pointer; margin: 0 10px;
+            color: #000080; font-family: 'Times New Roman', Times, serif;
+        }
+        .tab-btn.active {
+            background: linear-gradient(to bottom, #ff69b4, #ff1493); color: white;
+            border-color: #ff69b4;
+        }
+        .tab-btn:hover { border-color: #ff69b4; }
+
+        .paywall-modal {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,128,0.95); z-index: 1000; overflow-y: auto;
         }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background:
-                linear-gradient(145deg,
-                    rgba(255,120,200,1) 0%,
-                    rgba(255,80,170,1) 50%,
-                    rgba(255,40,140,1) 100%);
-            box-shadow:
-                inset 0 1px 0 rgba(255,255,255,0.8),
-                inset 0 -1px 0 rgba(180,0,120,0.9),
-                0 0 0 2px rgba(255,255,255,0.6),
-                0 2px 8px rgba(0,0,0,1),
-                0 0 20px rgba(255,120,200,0.6);
-            transform: translateY(-1px);
+        .paywall-container {
+            max-width: 1600px; margin: 20px auto; padding: 20px; gap: 15px;
+            display: flex; min-height: calc(100vh - 40px);
+        }
+        .paywall-left, .paywall-middle, .paywall-right {
+            flex: 1; min-height: 90vh; overflow-y: auto; padding-bottom: 30px;
+        }
+        .paywall-left { background: #e6e6fa; border: 4px outset #c0c0c0; padding: 25px; margin-right: 10px; }
+        .paywall-middle {
+            background: #fff0f5; border: 5px double #ff1493; padding: 25px;
+            margin: 0 10px; position: relative; flex: 1.2;
+        }
+        .paywall-right { background: #f0f8ff; border: 4px outset #c0c0c0; padding: 25px; margin-left: 10px; }
+
+        .paywall-header {
+            background: linear-gradient(to right, #000080, #0000ff); color: white;
+            padding: 18px; text-align: center; border-bottom: 4px solid #c0c0c0;
+            margin: -25px -25px 20px -25px; position: relative;
+        }
+        .paywall-title { font-size: 22px; font-weight: bold; text-shadow: 1px 1px 2px #000; }
+
+        .plan-title { font-size: 20px; color: #000080; font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+        .plan-price { font-size: 36px; color: #ff1493; font-weight: bold; margin-bottom: 15px; text-shadow: 1px 1px 1px #fff; }
+
+        .features { list-style: none; margin-bottom: 18px; }
+        .features li { padding: 6px 0; padding-left: 22px; position: relative; font-size: 14px; border-bottom: 1px solid #eee; }
+        .features li:last-child { border-bottom: none; }
+        .features li:before { content: "✦"; position: absolute; left: 0; color: #ff69b4; font-weight: bold; font-size: 16px; }
+        .featured-feature { color: #ff1493 !important; font-weight: bold; }
+
+        .buy-button {
+            width: 100%; background: linear-gradient(to bottom, #ff69b4, #ff1493);
+            color: white; border: 3px outset #ff69b4; padding: 16px;
+            font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px;
+            font-family: 'Times New Roman', Times, serif; text-shadow: 1px 1px 1px #000;
+        }
+        .buy-button:hover { background: linear-gradient(to bottom, #ff1493, #ff69b4); border-color: #ffd700; }
+        .buy-premium { background: linear-gradient(to bottom, #ffd700, #ffaa00) !important; color: #000 !important; border-color: #ff8c00 !important; font-size: 20px !important; }
+        .buy-premium:hover { background: linear-gradient(to bottom, #ffaa00, #ffd700) !important; border-color: #ff1493 !important; }
+        .buy-vip { background: linear-gradient(to bottom, #8b0000, #ff0000) !important; border-color: #ff4444 !important; font-size: 20px !important; }
+        .buy-vip:hover { background: linear-gradient(to bottom, #ff4444, #ff0000) !important; border-color: #ffd700 !important; }
+        .buy-live-monthly { background: linear-gradient(to bottom, #ff00ff, #ff1493) !important; border-color: #ff69b4 !important; font-size: 20px !important; }
+        .buy-live-monthly:hover { background: linear-gradient(to bottom, #ff1493, #ff00ff) !important; border-color: #ffd700 !important; }
+        .buy-live-lifetime { background: linear-gradient(to bottom, #ff1493, #ff00ff) !important; border-color: #ff69b4 !important; font-size: 20px !important; margin-top: 8px; }
+        .buy-live-lifetime:hover { background: linear-gradient(to bottom, #ff00ff, #ff1493) !important; border-color: #ffd700 !important; }
+
+        .section-title { font-size: 16px; color: #000080; font-weight: bold; margin: 20px 0 12px 0; border-bottom: 2px solid #000080; padding-bottom: 5px; }
+        .content-preview { background: #f5f5ff; border: 2px outset #c0c0c0; padding: 15px; margin: 15px 0; font-style: italic; }
+        .pricing-options { margin: 10px 0; }
+        .pricing-note { font-size: 12px; color: #ff1493; font-style: italic; margin-top: 5px; }
+        .live-preview-container { margin: 15px 0; }
+        .live-video-container {
+            position: relative; margin-bottom: 10px;
+            background: linear-gradient(45deg, #c0c0c0, #e0e0e0);
+            border: 2px inset #808080; height: 180px; overflow: hidden;
+        }
+        .live-thumb.blur { height: 100%; }
+        .sound-bar {
+            position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
+            display: flex; gap: 2px; height: 6px; background: rgba(255,255,255,0.3);
+            border-radius: 3px; padding: 2px 6px;
+        }
+        .sound-bar-peak {
+            width: 3px; background: linear-gradient(to top, #ff1493, #ff69b4);
+            border-radius: 2px; animation: soundPulse 1.2s infinite;
+        }
+        .sound-bar-peak:nth-child(1) { height: 12px; animation-delay: 0s; }
+        .sound-bar-peak:nth-child(2) { height: 8px; animation-delay: 0.1s; }
+        .sound-bar-peak:nth-child(3) { height: 16px; animation-delay: 0.2s; }
+        .sound-bar-peak:nth-child(4) { height: 10px; animation-delay: 0.3s; }
+        .sound-bar-peak:nth-child(5) { height: 14px; animation-delay: 0.4s; }
+        @keyframes soundPulse {
+            0%, 100% { transform: scaleY(1); opacity: 0.7; }
+            50% { transform: scaleY(1.3); opacity: 1; }
+        }
+        .hidden { display: none; }
+        .locked-title { color: #ff1493 !important; font-style: italic; font-size: 12px !important; }
+
+        /* PAYMENT MODAL - FIXED */
+        .payment-modal {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,128,0.98); z-index: 2000; overflow-y: auto;
+            backdrop-filter: blur(5px);
+        }
+        .payment-container {
+            max-width: 500px; margin: 50px auto; background: linear-gradient(135deg, #e6e6fa, #fff0f5);
+            border: 4px double #ff1493; padding: 30px; border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(255,20,147,0.3);
+        }
+        .payment-header {
+            background: linear-gradient(to right, #ff1493, #ff69b4); color: white;
+            padding: 20px; text-align: center; border-radius: 10px 10px 0 0;
+            margin: -30px -30px 20px -30px;
+        }
+        .payment-title { font-size: 24px; font-weight: bold; text-shadow: 2px 2px 4px #000; }
+        .payment-amount { font-size: 36px; color: #ffd700; font-weight: bold; margin: 10px 0; }
+        .payment-instructions {
+            background: rgba(255,255,255,0.9); border: 2px outset #c0c0c0;
+            padding: 20px; margin: 20px 0; border-radius: 8px; line-height: 1.6;
+        }
+        .paypal-link {
+            display: inline-block; background: #0070ba; color: white;
+            padding: 15px 30px; text-decoration: none; font-weight: bold;
+            border-radius: 8px; font-size: 18px; margin: 15px 0; text-align: center;
+            transition: all 0.3s ease; width: 100%; box-sizing: border-box;
+        }
+        .paypal-link:hover {
+            background: #005ea6; transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,112,186,0.4);
+        }
+        .close-payment {
+            background: linear-gradient(to bottom, #ff69b4, #ff1493); color: white;
+            border: 2px outset #ff69b4; padding: 12px 24px; font-size: 16px;
+            cursor: pointer; border-radius: 8px; font-weight: bold; width: 100%;
+            margin-top: 15px;
         }
 
-        ::-webkit-scrollbar-button {
-            display: none;
+        .view-content-btn {
+            position: absolute; top: 15px; right: 20px;
+            background: linear-gradient(to bottom, #ffd700, #ffaa00);
+            color: #000; border: 3px outset #ff8c00;
+            padding: 8px 20px; font-size: 16px; font-weight: bold; cursor: pointer;
+            border-radius: 8px; font-family: 'Times New Roman', Times, serif;
+            text-shadow: 1px 1px 1px #fff; min-width: 120px; text-align: center;
         }
-	
-    /* Pink orb cursor trail */
-    .cursor {
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background: radial-gradient(circle, #ff69b4 0%, #ff1493 50%, #c71585 100%);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 99999;
-        box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff1493;
-        transition: transform 0.1s ease-out;
-    }
-
-    .cursor.trail {
-        width: 8px;
-        height: 8px;
-        opacity: 0.6;
-        transition: all 0.3s ease-out;
-    }
-</style>
+        .view-content-btn:hover {
+            background: linear-gradient(to bottom, #ffaa00, #ffd700);
+            border-color: #ff1493; transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <div class="sidebar">
-        <!-- Purple/Pink Snowballs -->
-        <div class="snowball"></div>
-        <div class="snowball"></div>
-        <div class="snowball"></div>
-        <div class="snowball"></div>
-        <div class="snowball"></div>
-        <div class="snowball"></div>
-        <div class="snowball"></div>
-        <div class="snowball"></div>
-        <div class="snowball"></div>
-        <div class="snowball"></div>
+    <!-- TABS -->
+    <div class="page-tabs">
+        <button class="tab-btn active" onclick="showVideos()">🎥 Videos (25)</button>
+        <button class="tab-btn" onclick="showPhotos()">📸 Photos (150)</button>
+    </div>
 
-        <div class="logo-section">
-            <h2 class="logo-text">Doll's Website</h2>
+    <!-- VIDEO GRID -->
+    <div class="video-grid" id="videoGrid"></div>
+
+    <!-- PHOTO GRID -->
+    <div class="photo-grid hidden" id="photoGrid"></div>
+
+    <!-- PAYWALL MODAL -->
+    <div class="paywall-modal" id="paywallModal">
+        <div class="paywall-container">
+            <!-- LEFT: PHOTOS ONLY -->
+            <div class="paywall-left">
+                <div class="paywall-header">
+                    <div class="paywall-title">PHOTO INTRO</div>
+                </div>
+                <div class="plan-title">10 Exclusive Photos</div>
+                <div class="plan-price">$29</div>
+                <ul class="features">
+                    <li>10 HD personal photos</li>
+                    <li>Watermarked previews</li>
+                    <li>30 days access</li>
+                    <li>1 device only</li>
+                    <li>Photo gallery viewer</li>
+                    <li>Zoom & pan</li>
+                    <li>Download photos</li>
+                    <li class="featured-feature">❌ No videos</li>
+                </ul>
+                <button class="buy-button buy-premium" onclick="buyPlan('basic', 29)">PHOTOS ONLY - $29</button>
+            </div>
+
+            <!-- MIDDLE: COMPLETE ARCHIVE -->
+            <div class="paywall-middle">
+                <div class="paywall-header">
+                    <div class="paywall-title">COMPLETE ARCHIVE</div>
+                </div>
+                <div class="plan-title">ALL 25+ Videos + 150 Photos</div>
+                <div class="plan-price">$199</div>
+                <ul class="features">
+                    <li class="featured-feature">✅ ALL 25+ videos unlocked</li>
+                    <li class="featured-feature">✅ ALL 150+ photos unlocked</li>
+                    <li class="featured-feature">✅ Future updates FREE</li>
+                    <li class="featured-feature">✅ Uncensored versions</li>
+                    <li>✅ 4K video quality</li>
+                    <li>✅ Full downloads</li>
+                    <li>✅ Monthly new content</li>
+                    <li>✅ Private collections</li>
+                    <li>✅ Lifetime everything</li>
+                </ul>
+                <button class="buy-button buy-vip" onclick="buyPlan('archive', 199)">COMPLETE ARCHIVE - $199</button>
+            </div>
+
+            <!-- RIGHT: CAMERAS EVERYWHERE LIVESTREAM -->
+            <div class="paywall-right">
+                <div class="paywall-header">
+                    <div class="paywall-title">📹 CAMERAS EVERYWHERE</div>
+                </div>
+
+                <!-- LIVE PREVIEW AT TOP -->
+                <div class="section-title">🔴 LIVE RIGHT NOW</div>
+                <div class="live-preview-container">
+                    <div class="live-video-container">
+                        <div class="live-thumb blur">
+                            <span style="font-size: 28px;">🔴 LIVE</span>
+                        </div>
+                        <div class="premium-lock" style="top: 8px; right: 8px; font-size: 10px; padding: 2px 6px;">PREMIUM LIVE</div>
+                        <div class="sound-bar">
+                            <div class="sound-bar-peak"></div>
+                            <div class="sound-bar-peak"></div>
+                            <div class="sound-bar-peak"></div>
+                            <div class="sound-bar-peak"></div>
+                            <div class="sound-bar-peak"></div>
+                        </div>
+                    </div>
+                    <div class="content-preview" style="background: #ff69b4; color: white;">
+                        "📹 CAMERAS EVERYWHERE - WATCH ME LIVE!<br>
+                        Home, outside, everything documented 24/7<br>
+                        Multiple angles - NOTHING missed 💋"
+                    </div>
+                </div>
+
+                <div class="plan-title">24/7 Complete Surveillance</div>
+                <div class="plan-price">$200/mo or $500 LIFETIME</div>
+                <ul class="features">
+                    <li class="featured-feature">✅ CAMERAS EVERYWHERE in my home</li>
+                    <li class="featured-feature">✅ 24/7 NON-STOP live streaming</li>
+                    <li class="featured-feature">✅ Me going OUTSIDE documented</li>
+                    <li class="featured-feature">✅ EVERYTHING captured live</li>
+                    <li>✅ Multiple camera angles</li>
+                    <li>✅ HD 1080p quality</li>
+                    <li>✅ Live chat interaction</li>
+                    <li>✅ Daily routines</li>
+                    <li>✅ Private moments</li>
+                    <li>✅ Cancel anytime (monthly)</li>
+                </ul>
+
+                <div class="pricing-options">
+                    <button class="buy-button buy-live-monthly" onclick="buyPlan('live-monthly', 200)">📹 24/7 LIVE - $200/month</button>
+                    <button class="buy-button buy-live-lifetime" onclick="buyPlan('live-lifetime', 500)">📹 LIFETIME ACCESS - $500</button>
+                </div>
+                <div class="pricing-note">Monthly: Cancel anytime • Lifetime: Forever access</div>
+            </div>
         </div>
-        <div class="sidebar-section">
-            <p style="font-family: 'Orbitron', monospace; font-size: 22px; color: #ff2190; text-shadow: 3px 3px 0px #000;">Custom domains, Website Hosting, Game Server Hosting</p>
-            <p style="font-family: 'Orbitron', monospace; font-size: 22px; color: #ff2190; text-shadow: 3px 3px 0px #000;">Personal website, Business Website</p>
-            <p style="font-family: 'Orbitron', monospace; font-size: 22px; color: #ff2190; text-shadow: 3px 3px 0px #000;">Crypto Payments Accepted including BTC, LTC, XMR and many more!</p>
-        </div>
-            <p style="font-size: 18px; margin: 0; color: #ff6fff; text-shadow: 1px 1px 0px #000;">
-                <a href="mailto:doll@doll.pink">[doll@doll.pink]</a>
-            </p>
-            <p style="font-size: 14px; margin: 10px 0 0 0; color: #ff6ff; text-shadow: 1px 1px 0px #000;">
-            </p>
+        <button class="view-content-btn" onclick="closePaywall()" style="position: fixed; top: 20px; right: 20px;">View Content</button>
+    </div>
+
+    <!-- PAYMENT MODAL - NOW FULLY FUNCTIONAL -->
+    <div class="payment-modal" id="paymentModal">
+        <div class="payment-container">
+            <div class="payment-header">
+                <div class="payment-title" id="paymentTitle">COMPLETE ARCHIVE</div>
+                <div class="payment-amount" id="paymentAmount">$199</div>
+            </div>
+            <div class="payment-instructions">
+                <p><strong>STEP 1:</strong> Click the PayPal button below</p>
+                <p><strong>STEP 2:</strong> Enter exactly <span id="exactAmount" style="color: #ff1493; font-size: 20px; font-weight: bold;">$199.00</span></p>
+                <p><strong>STEP 3:</strong> Receive link for access once payment is verified (instant)</p>
+            </div>
+            <a href="https://www.paypal.me/zitkala55" target="_blank" class="paypal-link" id="paypalLink">
+                💰 PAYPAL - Send Exact Amount ➡️
+            </a>
+            <button class="close-payment" onclick="closePaymentModal()">BACK TO PLANS</button>
         </div>
     </div>
 
-    <div class="header">
-        <div class="nav-buttons">
-        </div>
-    </div>
+    <script>
+        // VIDEO DATA
+        const videos = [
+            {id:1,title:"Pink Lingerie Try-On",channel:"Premium Only",views:"247",time:"2 days", clear: true},
+            {id:2,title:"Thigh-High Stockings",channel:"Premium Only",views:"183",time:"1 week", clear: true},
+            {id:3,title:"Cosplay Photoshoot",channel:"Premium Only",views:"296",time:"3 days", clear: true},
+            {id:4,title:"",channel:"Premium Only",views:"142",time:"5 days"},
+            {id:5,title:"",channel:"Premium Only",views:"289",time:"1 day"},
+            {id:6,title:"",channel:"Premium Only",views:"198",time:"4 days"},
+            {id:7,title:"",channel:"Premium Only",views:"167",time:"6 days"},
+            {id:8,title:"",channel:"Premium Only",views:"234",time:"2 weeks"},
+            {id:9,title:"",channel:"Premium Only",views:"156",time:"9 days"},
+            {id:10,title:"",channel:"Premium Only",views:"278",time:"3 days"},
+            {id:11,title:"",channel:"Premium Only",views:"189",time:"1 week"},
+            {id:12,title:"",channel:"Premium Only",views:"321",time:"5 days"},
+            {id:13,title:"",channel:"Premium Only",views:"176",time:"10 days"},
+            {id:14,title:"",channel:"Premium Only",views:"245",time:"2 days"},
+            {id:15,title:"",channel:"Premium Only",views:"198",time:"7 days"},
+            {id:16,title:"",channel:"Premium Only",views:"267",time:"4 days"},
+            {id:17,title:"",channel:"Premium Only",views:"134",time:"12 days"},
+            {id:18,title:"",channel:"Premium Only",views:"298",time:"1 day"},
+            {id:19,title:"",channel:"Premium Only",views:"223",time:"6 days"},
+            {id:20,title:"",channel:"Premium Only",views:"187",time:"8 days"},
+            {id:21,title:"",channel:"Premium Only",views:"256",time:"3 days"},
+            {id:22,title:"",channel:"Premium Only",views:"179",time:"11 days"},
+            {id:23,title:"",channel:"Premium Only",views:"312",time:"2 days"},
+            {id:24,title:"",channel:"Premium Only",views:"165",time:"9 days"},
+            {id:25,title:"",channel:"Premium Only",views:"294",time:"4 days"}
+        ];
 
-    <div class="footer">
-        <marquee class="footer-text">Remote Computer Support. Fix any problem with your computer remotely with us. Make your own Gaming Server Minecraft, CSGO, Terraria + many more to choose from. Make your own premium website today! We provide custom e-mails. Custom Domains, and protection against hackers! 99.9% Uptime! Make your own online Store, Forums, Personal Website or any website you want! You can now pay with crypto! Contact us at <a href="mailto:doll@doll.pink">[doll@doll.pink]</a></marquee>
-    </div>
+        // PHOTO DATA
+        const photos = [];
+        const clearPhotos = ["Pink Lingerie Set", "Thigh High Pose", "Cosplay Full Body"];
+        for(let i = 1; i <= 150; i++) {
+            const isClear = i <= 3;
+            photos.push({
+                id: i,
+                title: isClear ? clearPhotos[i-1] : `Photo ${i}`,
+                views: Math.floor(Math.random() * 300) + 20,
+                days: Math.floor(Math.random() * 14) + 1,
+                clear: isClear
+            });
+        }
 
-    <!-- WELCOME SECTION - TOP CENTERED -->
-    <div class="welcome-section">
-        <h1 style="font-family: 'Orbitron', monospace; font-size: 36px; color: #ff1493; text-shadow: 3px 3px 0px #000;">Welcome to doll.pink | 1/30/2026 Update</h1>
-        <div class="welcome-text">
-            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #24f097; text-shadow: 3px 3px 0px #000;">You may have seen posts made by my friend about my situation. For those who haven't seen anything related to that, I basically had to fly to some country in Europe I chose Germany, which I'm starting to regret. I live in a shitty area and people stare at me in a bad way constantly, especially boomers.</p>
+        function renderVideos() {
+            const videoGrid = document.getElementById('videoGrid');
+            videoGrid.innerHTML = '';
+            videos.forEach(video => {
+                const card = document.createElement('div');
+                card.className = 'video-card';
+                const thumbClass = video.clear ? 'thumbnail clear' : 'thumbnail blur';
+                const thumbContent = video.clear ? '📸' : `<span>🔒</span>`;
+                const titleHtml = video.title ?
+                    `<div class="video-title">${video.title}</div>` :
+                    `<div class="video-title locked-title">Premium Content Locked</div>`;
 
-            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #24f060; text-shadow: 3px 3px 0px #000;">Now the reason I had to do that was cuz my parents found out I was trans and also found my HRT and supplies for it. They basically did fucked up shit to me and I'm still in pain from that. Basically beat me and shit.</p>
+                card.innerHTML = `
+                    <div class="${thumbClass}" onclick="handleVideoClick(${video.id})">${thumbContent}</div>
+                    <div class="premium-lock">${video.clear ? 'PREMIUM VIDEO' : 'BLURRY TEASER'}</div>
+                    ${titleHtml}
+                    <div class="channel">${video.channel}</div>
+                    <div class="meta">${video.views} views • ${video.time || `${video.days || 1} days ago`}</div>
+                `;
+                videoGrid.appendChild(card);
+            });
+        }
 
-            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #249000; text-shadow: 3px 3px 0px #000;">I have no idea how I made it this far and some of the things I did to be here today seems like it never happened... It's a bit better than Egypt here but still some people are passive aggressive to me, kinda trying to avoid me so idk how that will affect me...</p>
+        function renderPhotos() {
+            const photoGrid = document.getElementById('photoGrid');
+            photoGrid.innerHTML = '';
+            photos.forEach(photo => {
+                const card = document.createElement('div');
+                card.className = 'photo-card';
+                const thumbClass = photo.clear ? 'photo-thumb clear' : 'photo-thumb blur';
+                const thumbContent = photo.clear ? '💖' : `<span>🔒</span>`;
+                card.innerHTML = `
+                    <div class="${thumbClass}" onclick="handlePhotoClick(${photo.id})">${thumbContent}</div>
+                    <div class="premium-lock">${photo.clear ? 'PREMIUM PHOTO' : 'BLURRY PREVIEW'}</div>
+                    <div class="photo-title">${photo.title}</div>
+                `;
+                photoGrid.appendChild(card);
+            });
+        }
 
-            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #992190; text-shadow: 3px 3px 0px #000;">I'm currently living in a hotel for now with the money raised, which I'm very thankful for. I didn't expect anyone to donate so I'm very thankful for it.</p>
+        function showVideos() {
+            document.getElementById('videoGrid').classList.remove('hidden');
+            document.getElementById('photoGrid').classList.add('hidden');
+            document.querySelector('.tab-btn:nth-child(1)').classList.add('active');
+            document.querySelector('.tab-btn:nth-child(2)').classList.remove('active');
+            renderVideos();
+        }
 
-            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #ff4060; text-shadow: 3px 3px 0px #000;">I'm looking forward to fixing the legal stuff as far as I can—that is—and applying for asylum but I don't think I'll ever have enough to do that so I have no idea what I'm gonna do... Also getting an apartment is laughable lol the price they ask for that is insane...</p>
+        function showPhotos() {
+            document.getElementById('videoGrid').classList.add('hidden');
+            document.getElementById('photoGrid').classList.remove('hidden');
+            document.querySelector('.tab-btn:nth-child(1)').classList.remove('active');
+            document.querySelector('.tab-btn:nth-child(2)').classList.add('active');
+            renderPhotos();
+        }
 
-            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #ff4060; text-shadow: 3px 3px 0px #000;">At least I'm not outside in the cold... I was homeless for 2 weeks+ I went to a shelter but the people there were bad and some of them stole some clothes I had with me... Someone even pulled a knife on me and later got arrested. I only got a hotel room today after I received the funds into my bank account.</p>
+        function handleVideoClick(id) { openPaywall(); }
+        function handlePhotoClick(id) { openPaywall(); }
 
-            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #ff4060; text-shadow: 3px 3px 0px #000;">Sometimes I really want to leave it all behind and end my life... I basically have no one apart from 1 person but she has a family and has had a kid recently.. so she doesn't have as much time as before. It's scary being alone on your own—not that I ever had anyone... I wonder why I keep going...</p>
+        function openPaywall() {
+            document.getElementById('paywallModal').style.display = 'block';
+        }
 
-            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #f56fff; text-shadow: 3px 3px 0px #000;">If you wish to contact me you can do so here at my email <a href="mailto:doll@doll.pink">[doll@doll.pink]</a></p>
+        function closePaywall() {
+            document.getElementById('paywallModal').style.display = 'none';
+        }
 
-            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #ffff49; text-shadow: 3px 3px 0px #000;">For anyone wondering this is the link to my fundraiser: <a href="https://chuffed.org/project/helplayla">https://chuffed.org/project/helplayla</a></p>
+        // FIXED BUY PLAN FUNCTION
+        function buyPlan(plan, amount) {
+            console.log(`Buying plan: ${plan} for $${amount}`); // Debug log
 
-            <p style="font-family: 'Orbitron', monospace; font-size: 26px; color: #ffff49; text-shadow: 3px 3px 0px #000;">That's all for now thanks for reading! I hope this post finds you in a better position than I! 💕 </p>
+            const planNames = {
+                'basic': 'PHOTO INTRO',
+                'archive': 'COMPLETE ARCHIVE',
+                'live-monthly': '24/7 LIVE MONTHLY',
+                'live-lifetime': '24/7 LIVE LIFETIME'
+            };
 
-        </div>
-    </div>
+            // Update payment modal content
+            document.getElementById('paymentTitle').textContent = planNames[plan] || plan;
+            document.getElementById('paymentAmount').textContent = `$${amount}`;
+            document.getElementById('exactAmount').textContent = `$${amount}.00`;
+
+            // Close paywall and open payment modal
+            document.getElementById('paywallModal').style.display = 'none';
+            document.getElementById('paymentModal').style.display = 'block';
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+            document.getElementById('paywallModal').style.display = 'block';
+        }
+
+        // Initialize
+        renderVideos();
+
+        // Make functions globally available
+        window.handleVideoClick = handleVideoClick;
+        window.handlePhotoClick = handlePhotoClick;
+        window.buyPlan = buyPlan;
+        window.openPaywall = openPaywall;
+        window.closePaywall = closePaywall;
+        window.showVideos = showVideos;
+        window.showPhotos = showPhotos;
+        window.closePaymentModal = closePaymentModal;
+    </script>
 </body>
 </html>
