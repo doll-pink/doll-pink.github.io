@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title id="marquee-title">Doll.Pink | Help LayLA | CS 1.6 Server</title>
+    <title> Doll.Pink | Help Layla | CS 1.6 Server</title>
     <style>
         a {
             color: green;
@@ -13,24 +13,8 @@
     </style>
 </head>
 <body>
-    <p>Check out our projects:</p>
-    <ul>
-        <li><a href="https://chuffed.org/project/helplayla">Please take a look at my fundraiser :( &lt;---</a></li>
-        <li><a href="https://cs.doll.pink:27016">CS Doll.Pink Server</a></li>
-    </ul>
-    
-    <script>
-        let title = document.getElementById('marquee-title');
-        let original = title.textContent;
-        let pos = 0;
-        
-        setInterval(() => {
-            pos = (pos + 1) % (original.length * 2);
-            let visible = original + original;
-            let start = pos;
-            if (start > original.length) start -= original.length;
-            title.textContent = visible.slice(start, start + 30);
-        }, 250);
-    </script>
+    <p>Check these links out</p>
+        <a href="https://chuffed.org/project/helplayla">Please take a look at my fundraiser :( &lt;---</a>
+        <a href="https://cs.doll.pink:27016">Play Counter Strike 1.6 Online Multiplayer</a>
 </body>
 </html>
